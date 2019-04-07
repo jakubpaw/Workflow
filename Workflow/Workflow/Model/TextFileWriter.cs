@@ -14,5 +14,15 @@ namespace Workflow
         {
             filePath = path;
         }
+
+        public void Write(string[] newText)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddOneLine(string newLine)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

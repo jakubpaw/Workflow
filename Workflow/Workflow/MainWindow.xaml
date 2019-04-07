@@ -5,39 +5,25 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Workflow"
+        xmlns:View="clr-namespace:Workflow.View"
         mc:Ignorable="d"
         ResizeMode="CanMinimize"
         Title="Workflow" Height="450" Width="800">
-    <Window.Resources>
-        <sys:String x:Key="ComboBoxTitle">Wybrane zlecenie:</sys:String>
 
-        <x:Array x:Key="ComboBoxItems" Type="sys:String">
-            <sys:String>Piwiarnia</sys:String>
-            <sys:String>Osiedle Zandka</sys:String>
-        </x:Array>
-    </Window.Resources>
     <Grid RenderTransformOrigin="0.5,0.5"  Background="LightBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
 
-        <!--<Button Margin="40,80,500,315">
-            <Button.Content>
-                <WrapPanel>
-                    <TextBlock Foreground="DarkBlue">Multi </TextBlock>
-                    <TextBlock Foreground="Aqua">Color </TextBlock>
-                    <TextBlock>Button</TextBlock>
-                </WrapPanel>
-            </Button.Content>
-        </Button>-->
-
-
-        <StackPanel Margin="20,20,500,100">
-            <Label Content="{StaticResource ComboBoxTitle}"/>
-            <ComboBox ItemsSource="{DynamicResource ComboBoxItems}"/>
-            <Button Margin="20,20,20,0">Dodaj zlecenie</Button>
-            <Button Margin="20">Usuń zlecenie</Button>
-        </StackPanel>
+        <View:TaskView x:Name="TaskViewControl" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"></View:TaskView >
 
 
-        <StackPanel Margin="550,50,100,0">
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Button Margin="0,0,0,0">Start</Button>
             <Button Margin="0,10,0,0">Stop</Button>
             <Button Margin="0,10,0,0">Wygeneruj raport</Button>

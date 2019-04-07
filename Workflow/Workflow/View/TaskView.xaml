@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="Workflow.View.TaskView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:Workflow.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="150">
+    <UserControl.Resources>
+        <sys:String x:Key="ComboBoxTitle">Wybrane zlecenie:</sys:String>
+
+        <x:Array x:Key="ComboBoxItems" Type="sys:String">
+            <sys:String>Piwiarnia</sys:String>
+            <sys:String>Osiedle Zandka</sys:String>
+        </x:Array>
+    </UserControl.Resources>
+    <Grid>
+        <StackPanel Margin="0,0,0,0">
+            <Label Content="{StaticResource ComboBoxTitle}"/>
+            <ComboBox ItemsSource="{DynamicResource ComboBoxItems}"/>
+            <Button Margin="20,20,20,0">Dodaj zlecenie</Button>
+            <Button Margin="20">Usuń zlecenie</Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
