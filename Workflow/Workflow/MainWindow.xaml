@@ -20,7 +20,7 @@
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
 
-        <View:TaskView x:Name="TaskViewControl" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"></View:TaskView >
+        <View:UserTaskView x:Name="UserTaskViewControl" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"></View:UserTaskView >
 
 
         <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">

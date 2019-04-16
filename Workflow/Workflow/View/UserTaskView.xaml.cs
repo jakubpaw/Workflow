@@ -18,11 +18,12 @@ namespace Workflow.View
     /// <summary>
     /// Interaction logic for TaskView.xaml
     /// </summary>
-    public partial class TaskView : UserControl
+    public partial class UserTaskView : UserControl
     {
-        public TaskView()
+        public UserTaskView()
         {
             InitializeComponent();
+            this.DataContext = new Workflow.ViewModel.UserTaskViewModel();
         }
     }
 }

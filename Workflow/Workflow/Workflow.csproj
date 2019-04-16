@@ -55,14 +55,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\SessionViewModel.cs" />
+    <Compile Include="ViewModel\UserTaskViewModel.cs" />
+    <Compile Include="Model\ILoadable.cs" />
+    <Compile Include="Model\ObjectLoader.cs" />
     <Compile Include="Model\Session.cs" />
+    <Compile Include="Model\UserTask.cs" />
     <Compile Include="Model\TextFileReader.cs" />
     <Compile Include="Model\TextFileWriter.cs" />
     <Compile Include="View\SessionView.xaml.cs">
       <DependentUpon>SessionView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\TaskView.xaml.cs">
-      <DependentUpon>TaskView.xaml</DependentUpon>
+    <Compile Include="View\UserTaskView.xaml.cs">
+      <DependentUpon>UserTaskView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -80,7 +85,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\TaskView.xaml">
+    <Page Include="View\UserTaskView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -111,8 +116,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ModelView\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
