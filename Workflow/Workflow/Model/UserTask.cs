@@ -24,5 +24,9 @@ namespace Workflow.Model
         {
             name = taskName;
         }
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

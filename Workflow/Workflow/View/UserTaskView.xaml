@@ -19,11 +19,11 @@
     <Grid>
         <StackPanel Margin="0,0,0,0">
             <Label Content="{StaticResource ComboBoxTitle}"/>
-            <ComboBox Name="TaskComboBox" ItemsSource="{Binding Tasks}" DisplayMemberPath="Name">
+            <ComboBox Name="TaskComboBox" SelectedItem="{Binding SelectedUserTask}" ItemsSource="{Binding Tasks}" DisplayMemberPath="Name">
 
             </ComboBox>
-            <Button Margin="20,20,20,0">Dodaj zlecenie</Button>
-            <Button Margin="20">Usuń zlecenie</Button>
+            <Button Name="AddTaskButton" Margin="20,20,20,0">Dodaj zlecenie</Button>
+            <Button Name="DeleteTaskButton" Command="{Binding DeleteCommand}" Margin="20">Usuń zlecenie</Button>
         </StackPanel>
     </Grid>
 </UserControl>

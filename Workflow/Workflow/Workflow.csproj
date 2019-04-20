@@ -55,6 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\ObjectWriter.cs" />
+    <Compile Include="MyICommand.cs" />
     <Compile Include="ViewModel\SessionViewModel.cs" />
     <Compile Include="ViewModel\UserTaskViewModel.cs" />
     <Compile Include="Model\ILoadable.cs" />

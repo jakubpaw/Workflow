@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -9,16 +10,16 @@ namespace Workflow.Model
 {
     class ObjectLoader
     {
-        private string userTasksTxtFilePath = "txtFiles/userTasks.txt";
+        private readonly string userTasksTxtFilePath = "txtFiles/userTasks.txt";
 
         public ObjectLoader()
         {
 
         }
 
-        public List<UserTask> LoadUserTasksFromTextFile()
+        public ObservableCollection<UserTask> LoadUserTasksFromTextFile()
         {
-            List<UserTask> userTasksList = new List<UserTask>();
+            ObservableCollection<UserTask> userTasksList = new ObservableCollection<UserTask>();
             try
             {
                 TextFileReader fileReader = new TextFileReader(userTasksTxtFilePath);

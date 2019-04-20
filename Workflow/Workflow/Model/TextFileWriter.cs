@@ -15,14 +15,14 @@ namespace Workflow.Model
             filePath = path;
         }
 
-        public void Write(string[] newText)
+        public void Write(List<string> newText)
         {
-            throw new NotImplementedException();
+            System.IO.File.WriteAllLines(filePath, newText);
         }
 
         public void AddOneLine(string newLine)
         {
-            throw new NotImplementedException();
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(filePath, true)) ;
         }
     }
 }
